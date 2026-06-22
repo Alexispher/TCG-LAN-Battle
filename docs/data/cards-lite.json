@@ -1,0 +1,168 @@
+[
+  {
+    "id": "ptcg-basic-flameling",
+    "name": "Flameling",
+    "supertype": "pokemon",
+    "subtypes": ["basic"],
+    "hp": 70,
+    "type": "fire",
+    "weakness": "water",
+    "retreat": 1,
+    "attacks": [
+      { "id": "ember", "name": "Ember", "cost": ["fire"], "damage": 20, "text": "Deal 20 damage." },
+      { "id": "spark-burn", "name": "Spark Burn", "cost": ["fire", "colorless"], "damage": 30, "text": "Flip a coin. If heads, the opponent's Active is Burned.", "effect": "coin-burn" }
+    ],
+    "rarity": "starter"
+  },
+  {
+    "id": "ptcg-stage-flareonix",
+    "name": "Flareonix",
+    "supertype": "pokemon",
+    "subtypes": ["stage1"],
+    "evolvesFrom": "Flameling",
+    "hp": 120,
+    "type": "fire",
+    "weakness": "water",
+    "retreat": 2,
+    "ability": { "id": "heat-aura", "name": "Heat Aura", "text": "This Pokémon's attacks do 10 more damage." },
+    "attacks": [
+      { "id": "flame-tail", "name": "Flame Tail", "cost": ["fire", "colorless"], "damage": 60, "text": "Deal 60 damage." }
+    ],
+    "rarity": "starter"
+  },
+  {
+    "id": "ptcg-basic-aquapup",
+    "name": "Aquapup",
+    "supertype": "pokemon",
+    "subtypes": ["basic"],
+    "hp": 80,
+    "type": "water",
+    "weakness": "grass",
+    "retreat": 1,
+    "attacks": [
+      { "id": "splash", "name": "Splash", "cost": ["water"], "damage": 20, "text": "Deal 20 damage." },
+      { "id": "water-bite", "name": "Water Bite", "cost": ["water", "colorless"], "damage": 40, "text": "Deal 40 damage." }
+    ],
+    "rarity": "starter"
+  },
+  {
+    "id": "ptcg-basic-leafcub",
+    "name": "Leafcub",
+    "supertype": "pokemon",
+    "subtypes": ["basic"],
+    "hp": 70,
+    "type": "grass",
+    "weakness": "fire",
+    "retreat": 1,
+    "ability": { "id": "thick-hide", "name": "Thick Hide", "text": "Damage received from attacks is reduced by 10." },
+    "attacks": [
+      { "id": "vine-hit", "name": "Vine Hit", "cost": ["grass"], "damage": 20, "text": "Deal 20 damage." }
+    ],
+    "rarity": "starter"
+  },
+  {
+    "id": "ptcg-basic-voltkit",
+    "name": "Voltkit",
+    "supertype": "pokemon",
+    "subtypes": ["basic"],
+    "hp": 60,
+    "type": "lightning",
+    "weakness": "fighting",
+    "retreat": 1,
+    "attacks": [
+      { "id": "static-jolt", "name": "Static Jolt", "cost": ["lightning"], "damage": 10, "text": "Flip a coin. If heads, the opponent's Active is Paralyzed.", "effect": "coin-paralyze" }
+    ],
+    "rarity": "starter"
+  },
+  {
+    "id": "ptcg-energy-fire",
+    "name": "Fire Energy",
+    "supertype": "energy",
+    "energyType": "fire",
+    "rarity": "energy"
+  },
+  {
+    "id": "ptcg-energy-water",
+    "name": "Water Energy",
+    "supertype": "energy",
+    "energyType": "water",
+    "rarity": "energy"
+  },
+  {
+    "id": "ptcg-energy-grass",
+    "name": "Grass Energy",
+    "supertype": "energy",
+    "energyType": "grass",
+    "rarity": "energy"
+  },
+  {
+    "id": "ptcg-energy-lightning",
+    "name": "Lightning Energy",
+    "supertype": "energy",
+    "energyType": "lightning",
+    "rarity": "energy"
+  },
+  {
+    "id": "ptcg-item-potion",
+    "name": "Potion",
+    "supertype": "trainer",
+    "trainerType": "item",
+    "text": "Heal 30 damage from one of your Pokémon.",
+    "effect": "heal-30",
+    "rarity": "item"
+  },
+  {
+    "id": "ptcg-item-switch-rope",
+    "name": "Switch Rope",
+    "supertype": "trainer",
+    "trainerType": "item",
+    "text": "Switch your Active Pokémon with one of your Benched Pokémon.",
+    "effect": "switch-own-active",
+    "rarity": "item"
+  },
+  {
+    "id": "ptcg-item-search-bell",
+    "name": "Search Bell",
+    "supertype": "trainer",
+    "trainerType": "item",
+    "text": "Search your deck for a Basic Pokémon, reveal it, put it into your hand, then shuffle your deck.",
+    "effect": "search-basic-pokemon",
+    "rarity": "item"
+  },
+  {
+    "id": "ptcg-item-toxic-dart",
+    "name": "Toxic Dart",
+    "supertype": "trainer",
+    "trainerType": "item",
+    "text": "The opponent's Active Pokémon is Poisoned.",
+    "effect": "poison-opponent-active",
+    "rarity": "item"
+  },
+  {
+    "id": "ptcg-supporter-professor-notes",
+    "name": "Professor's Notes",
+    "supertype": "trainer",
+    "trainerType": "supporter",
+    "text": "Draw 3 cards. You may play only 1 Supporter each turn.",
+    "effect": "draw-3",
+    "rarity": "supporter"
+  },
+  {
+    "id": "ptcg-stadium-training-ground",
+    "name": "Training Ground",
+    "supertype": "trainer",
+    "trainerType": "stadium",
+    "text": "Each player's Active Pokémon has 1 less Retreat Cost.",
+    "effect": "stadium-retreat-minus-1",
+    "rarity": "stadium"
+  },
+  {
+    "id": "ptcg-tool-lucky-band",
+    "name": "Lucky Band",
+    "supertype": "trainer",
+    "trainerType": "tool",
+    "text": "The Pokémon this card is attached to does 10 more damage to the opponent's Active Pokémon.",
+    "effect": "tool-damage-plus-10",
+    "rarity": "tool"
+  }
+]

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Pocket TCG // PEGASUS LAN</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+  <div class="bg-orb bg-orb-a"></div>
+  <div class="bg-orb bg-orb-b"></div>
+
+  <header class="topbar">
+    <div>
+      <strong>Pocket TCG</strong>
+      <span>// MQTT LAN/WEB</span>
+    </div>
+    <button class="small ghost" id="btn-reset-account" title="Limpa apenas sua conta local">Reset local</button>
+  </header>
+
+  <main>
+    <section id="screen-account" class="screen active">
+      <div class="panel hero-panel">
+        <p class="eyebrow">conta local</p>
+        <h1>Crie seu treinador</h1>
+        <p class="muted">A conta fica salva no navegador por <code>localStorage</code>. Não há login online nem senha.</p>
+        <label>Nome</label>
+        <input id="account-name" maxlength="24" placeholder="Ex.: Alex" autocomplete="off" />
+        <label>Avatar</label>
+        <select id="account-avatar">
+          <option value="trainer-red">Treinador Vermelho</option>
+          <option value="trainer-blue">Treinadora Azul</option>
+          <option value="trainer-green">Treinador Verde</option>
+          <option value="trainer-purple">Treinadora Roxa</option>
+        </select>
+        <button id="btn-save-account">Salvar e entrar</button>
+      </div>
+    </section>
+
+    <section id="screen-menu" class="screen">
+      <div class="panel hero-panel">
+        <p class="eyebrow">menu</p>
+        <h1 id="welcome-title">Bem-vindo</h1>
+        <p id="account-stats" class="muted"></p>
+        <div class="grid-2">
+          <button id="btn-create-room">Criar sala</button>
+          <button id="btn-deck-builder" class="secondary">Meu deck</button>
+        </div>
+        <label>Código da sala</label>
+        <input id="room-code-input" placeholder="Ex.: PEGASUS-8F3KQ2" autocomplete="off" />
+        <button id="btn-join-room" class="secondary">Entrar na sala</button>
+      </div>
+    </section>
+
+    <section id="screen-deck" class="screen">
+      <div class="panel wide-panel">
+        <p class="eyebrow">deck local</p>
+        <h2>Deck demonstrativo</h2>
+        <p class="muted">Este pacote já vem com um deck de 60 cartas fictícias para testar regras, habilidades, condições, estádio, ferramenta, busca no deck e moeda. Depois você pode trocar o banco em <code>docs/data/cards-lite.json</code>.</p>
+        <div id="deck-list" class="deck-list"></div>
+        <button id="btn-back-menu" class="secondary">Voltar</button>
+      </div>
+    </section>
+
+    <section id="screen-lobby" class="screen">
+      <div class="panel hero-panel">
+        <p class="eyebrow">lobby mqtt</p>
+        <h2>Sala: <span id="lobby-room-code" class="accent"></span></h2>
+        <p id="connection-status" class="muted">Conectando...</p>
+        <div class="players-box" id="lobby-players"></div>
+        <button id="btn-copy-room" class="secondary">Copiar código</button>
+        <button id="btn-refresh-lobby" class="secondary">Atualizar sala</button>
+        <button id="btn-start-game">Iniciar partida</button>
+        <button id="btn-leave-lobby" class="ghost">Sair</button>
+      </div>
+    </section>
+
+    <section id="screen-game" class="screen game-screen">
+      <aside class="side-panel">
+        <h3>Sala <span id="game-room-code"></span></h3>
+        <p id="turn-label" class="turn-label">Aguardando...</p>
+        <p id="rules-label" class="muted small-text"></p>
+        <div id="game-log" class="log"></div>
+        <button id="btn-end-turn" class="secondary">Encerrar turno</button>
+        <button id="btn-leave-game" class="ghost">Sair da mesa</button>
+      </aside>
+
+      <section class="table">
+        <div class="opponent-area board-zone" id="opponent-board"></div>
+
+        <div class="center-area">
+          <div class="stadium-slot" id="stadium-slot">Sem estádio</div>
+          <div class="choice-box hidden" id="choice-box"></div>
+        </div>
+
+        <div class="my-area board-zone" id="my-board"></div>
+        <div class="hand-wrap">
+          <div class="zone-title">Sua mão <span id="hand-count"></span></div>
+          <div id="my-hand" class="hand"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <template id="card-template">
+    <button class="tcg-card" type="button">
+      <div class="card-glare"></div>
+      <div class="card-shine"></div>
+      <div class="card-content">
+        <div class="card-topline"><span class="card-type-dot"></span><span class="card-hp"></span></div>
+        <h4 class="card-name"></h4>
+        <p class="card-subtype"></p>
+        <div class="card-art">◆</div>
+        <p class="card-text"></p>
+      </div>
+    </button>
+  </template>
+
+  <script src="js/cards.js"></script>
+  <script src="js/account.js"></script>
+  <script src="js/rules-engine.js"></script>
+  <script src="js/mqtt-game.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
