@@ -3,14 +3,34 @@
     "id": "ptcg-basic-flameling",
     "name": "Flameling",
     "supertype": "pokemon",
-    "subtypes": ["basic"],
+    "subtypes": [
+      "basic"
+    ],
     "hp": 70,
     "type": "fire",
     "weakness": "water",
     "retreat": 1,
     "attacks": [
-      { "id": "ember", "name": "Ember", "cost": ["fire"], "damage": 20, "text": "Deal 20 damage." },
-      { "id": "spark-burn", "name": "Spark Burn", "cost": ["fire", "colorless"], "damage": 30, "text": "Flip a coin. If heads, the opponent's Active is Burned.", "effect": "coin-burn" }
+      {
+        "id": "ember",
+        "name": "Ember",
+        "cost": [
+          "fire"
+        ],
+        "damage": 20,
+        "text": "Deal 20 damage."
+      },
+      {
+        "id": "spark-burn",
+        "name": "Spark Burn",
+        "cost": [
+          "fire",
+          "colorless"
+        ],
+        "damage": 30,
+        "text": "Flip a coin. If heads, the opponent's Active is Burned.",
+        "effect": "coin-burn"
+      }
     ],
     "rarity": "starter"
   },
@@ -18,61 +38,393 @@
     "id": "ptcg-stage-flareonix",
     "name": "Flareonix",
     "supertype": "pokemon",
-    "subtypes": ["stage1"],
+    "subtypes": [
+      "stage1"
+    ],
     "evolvesFrom": "Flameling",
     "hp": 120,
     "type": "fire",
     "weakness": "water",
     "retreat": 2,
-    "ability": { "id": "heat-aura", "name": "Heat Aura", "text": "This Pokémon's attacks do 10 more damage." },
+    "ability": {
+      "id": "heat-aura",
+      "name": "Heat Aura",
+      "text": "This Pokémon's attacks do 10 more damage."
+    },
     "attacks": [
-      { "id": "flame-tail", "name": "Flame Tail", "cost": ["fire", "colorless"], "damage": 60, "text": "Deal 60 damage." }
+      {
+        "id": "flame-tail",
+        "name": "Flame Tail",
+        "cost": [
+          "fire",
+          "colorless"
+        ],
+        "damage": 60,
+        "text": "Deal 60 damage."
+      },
+      {
+        "id": "inferno-pulse",
+        "name": "Inferno Pulse",
+        "cost": [
+          "fire",
+          "fire",
+          "colorless"
+        ],
+        "damage": 90,
+        "text": "Deal 90 damage."
+      }
     ],
-    "rarity": "starter"
+    "rarity": "rare"
   },
   {
     "id": "ptcg-basic-aquapup",
     "name": "Aquapup",
     "supertype": "pokemon",
-    "subtypes": ["basic"],
+    "subtypes": [
+      "basic"
+    ],
     "hp": 80,
     "type": "water",
     "weakness": "grass",
     "retreat": 1,
     "attacks": [
-      { "id": "splash", "name": "Splash", "cost": ["water"], "damage": 20, "text": "Deal 20 damage." },
-      { "id": "water-bite", "name": "Water Bite", "cost": ["water", "colorless"], "damage": 40, "text": "Deal 40 damage." }
+      {
+        "id": "splash",
+        "name": "Splash",
+        "cost": [
+          "water"
+        ],
+        "damage": 20,
+        "text": "Deal 20 damage."
+      },
+      {
+        "id": "water-bite",
+        "name": "Water Bite",
+        "cost": [
+          "water",
+          "colorless"
+        ],
+        "damage": 40,
+        "text": "Deal 40 damage."
+      }
     ],
     "rarity": "starter"
+  },
+  {
+    "id": "ptcg-stage-tidehound",
+    "name": "Tidehound",
+    "supertype": "pokemon",
+    "subtypes": [
+      "stage1"
+    ],
+    "evolvesFrom": "Aquapup",
+    "hp": 130,
+    "type": "water",
+    "weakness": "grass",
+    "retreat": 2,
+    "attacks": [
+      {
+        "id": "aqua-crash",
+        "name": "Aqua Crash",
+        "cost": [
+          "water",
+          "colorless"
+        ],
+        "damage": 60,
+        "text": "Deal 60 damage."
+      },
+      {
+        "id": "deep-current",
+        "name": "Deep Current",
+        "cost": [
+          "water",
+          "water",
+          "colorless"
+        ],
+        "damage": 100,
+        "text": "Deal 100 damage."
+      }
+    ],
+    "rarity": "rare"
   },
   {
     "id": "ptcg-basic-leafcub",
     "name": "Leafcub",
     "supertype": "pokemon",
-    "subtypes": ["basic"],
+    "subtypes": [
+      "basic"
+    ],
     "hp": 70,
     "type": "grass",
     "weakness": "fire",
     "retreat": 1,
-    "ability": { "id": "thick-hide", "name": "Thick Hide", "text": "Damage received from attacks is reduced by 10." },
+    "ability": {
+      "id": "thick-hide",
+      "name": "Thick Hide",
+      "text": "Damage received from attacks is reduced by 10."
+    },
     "attacks": [
-      { "id": "vine-hit", "name": "Vine Hit", "cost": ["grass"], "damage": 20, "text": "Deal 20 damage." }
+      {
+        "id": "vine-hit",
+        "name": "Vine Hit",
+        "cost": [
+          "grass"
+        ],
+        "damage": 20,
+        "text": "Deal 20 damage."
+      },
+      {
+        "id": "sleep-pollen",
+        "name": "Sleep Pollen",
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "damage": 30,
+        "text": "Placeholder text for a future Sleep effect.",
+        "effect": "todo-coin-sleep"
+      }
     ],
     "rarity": "starter"
+  },
+  {
+    "id": "ptcg-stage-forestmaw",
+    "name": "Forestmaw",
+    "supertype": "pokemon",
+    "subtypes": [
+      "stage1"
+    ],
+    "evolvesFrom": "Leafcub",
+    "hp": 125,
+    "type": "grass",
+    "weakness": "fire",
+    "retreat": 2,
+    "ability": {
+      "id": "thick-hide",
+      "name": "Thick Hide",
+      "text": "Damage received from attacks is reduced by 10."
+    },
+    "attacks": [
+      {
+        "id": "root-smash",
+        "name": "Root Smash",
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "damage": 60,
+        "text": "Deal 60 damage."
+      }
+    ],
+    "rarity": "rare"
   },
   {
     "id": "ptcg-basic-voltkit",
     "name": "Voltkit",
     "supertype": "pokemon",
-    "subtypes": ["basic"],
+    "subtypes": [
+      "basic"
+    ],
     "hp": 60,
     "type": "lightning",
     "weakness": "fighting",
     "retreat": 1,
     "attacks": [
-      { "id": "static-jolt", "name": "Static Jolt", "cost": ["lightning"], "damage": 10, "text": "Flip a coin. If heads, the opponent's Active is Paralyzed.", "effect": "coin-paralyze" }
+      {
+        "id": "static-jolt",
+        "name": "Static Jolt",
+        "cost": [
+          "lightning"
+        ],
+        "damage": 10,
+        "text": "Flip a coin. If heads, the opponent's Active is Paralyzed.",
+        "effect": "coin-paralyze"
+      },
+      {
+        "id": "quick-zap",
+        "name": "Quick Zap",
+        "cost": [
+          "lightning",
+          "colorless"
+        ],
+        "damage": 40,
+        "text": "Deal 40 damage."
+      }
     ],
     "rarity": "starter"
+  },
+  {
+    "id": "ptcg-stage-thunderlynx",
+    "name": "Thunderlynx",
+    "supertype": "pokemon",
+    "subtypes": [
+      "stage1"
+    ],
+    "evolvesFrom": "Voltkit",
+    "hp": 110,
+    "type": "lightning",
+    "weakness": "fighting",
+    "retreat": 1,
+    "attacks": [
+      {
+        "id": "storm-claw",
+        "name": "Storm Claw",
+        "cost": [
+          "lightning",
+          "colorless"
+        ],
+        "damage": 70,
+        "text": "Deal 70 damage."
+      },
+      {
+        "id": "stun-burst",
+        "name": "Stun Burst",
+        "cost": [
+          "lightning",
+          "lightning",
+          "colorless"
+        ],
+        "damage": 80,
+        "text": "Flip a coin. If heads, the opponent's Active is Paralyzed.",
+        "effect": "coin-paralyze"
+      }
+    ],
+    "rarity": "rare"
+  },
+  {
+    "id": "ptcg-basic-stonebun",
+    "name": "Stonebun",
+    "supertype": "pokemon",
+    "subtypes": [
+      "basic"
+    ],
+    "hp": 90,
+    "type": "colorless",
+    "weakness": "fighting",
+    "retreat": 2,
+    "attacks": [
+      {
+        "id": "tackle",
+        "name": "Tackle",
+        "cost": [
+          "colorless"
+        ],
+        "damage": 20,
+        "text": "Deal 20 damage."
+      },
+      {
+        "id": "heavy-roll",
+        "name": "Heavy Roll",
+        "cost": [
+          "colorless",
+          "colorless"
+        ],
+        "damage": 50,
+        "text": "Deal 50 damage."
+      }
+    ],
+    "rarity": "common"
+  },
+  {
+    "id": "ptcg-basic-mistling",
+    "name": "Mistling",
+    "supertype": "pokemon",
+    "subtypes": [
+      "basic"
+    ],
+    "hp": 60,
+    "type": "water",
+    "weakness": "grass",
+    "retreat": 1,
+    "attacks": [
+      {
+        "id": "soft-wave",
+        "name": "Soft Wave",
+        "cost": [
+          "colorless"
+        ],
+        "damage": 10,
+        "text": "Deal 10 damage."
+      },
+      {
+        "id": "bubble-shot",
+        "name": "Bubble Shot",
+        "cost": [
+          "water"
+        ],
+        "damage": 30,
+        "text": "Deal 30 damage."
+      }
+    ],
+    "rarity": "common"
+  },
+  {
+    "id": "ptcg-basic-cinderbat",
+    "name": "Cinderbat",
+    "supertype": "pokemon",
+    "subtypes": [
+      "basic"
+    ],
+    "hp": 65,
+    "type": "fire",
+    "weakness": "water",
+    "retreat": 0,
+    "attacks": [
+      {
+        "id": "wing-spark",
+        "name": "Wing Spark",
+        "cost": [
+          "colorless"
+        ],
+        "damage": 10,
+        "text": "Deal 10 damage."
+      },
+      {
+        "id": "burning-dive",
+        "name": "Burning Dive",
+        "cost": [
+          "fire"
+        ],
+        "damage": 30,
+        "text": "Flip a coin. If heads, the opponent's Active is Burned.",
+        "effect": "coin-burn"
+      }
+    ],
+    "rarity": "common"
+  },
+  {
+    "id": "ptcg-basic-seedotter",
+    "name": "Seedotter",
+    "supertype": "pokemon",
+    "subtypes": [
+      "basic"
+    ],
+    "hp": 75,
+    "type": "grass",
+    "weakness": "fire",
+    "retreat": 1,
+    "attacks": [
+      {
+        "id": "leaf-slap",
+        "name": "Leaf Slap",
+        "cost": [
+          "grass"
+        ],
+        "damage": 20,
+        "text": "Deal 20 damage."
+      },
+      {
+        "id": "guarded-bite",
+        "name": "Guarded Bite",
+        "cost": [
+          "grass",
+          "colorless"
+        ],
+        "damage": 40,
+        "text": "Deal 40 damage."
+      }
+    ],
+    "rarity": "common"
   },
   {
     "id": "ptcg-energy-fire",
@@ -100,6 +452,13 @@
     "name": "Lightning Energy",
     "supertype": "energy",
     "energyType": "lightning",
+    "rarity": "energy"
+  },
+  {
+    "id": "ptcg-energy-colorless",
+    "name": "Colorless Energy",
+    "supertype": "energy",
+    "energyType": "colorless",
     "rarity": "energy"
   },
   {
@@ -139,8 +498,26 @@
     "rarity": "item"
   },
   {
+    "id": "ptcg-item-medical-kit",
+    "name": "Medical Kit",
+    "supertype": "trainer",
+    "trainerType": "item",
+    "text": "Heal 30 damage from one of your Pokémon.",
+    "effect": "heal-30",
+    "rarity": "item"
+  },
+  {
     "id": "ptcg-supporter-professor-notes",
     "name": "Professor's Notes",
+    "supertype": "trainer",
+    "trainerType": "supporter",
+    "text": "Draw 3 cards. You may play only 1 Supporter each turn.",
+    "effect": "draw-3",
+    "rarity": "supporter"
+  },
+  {
+    "id": "ptcg-supporter-field-researcher",
+    "name": "Field Researcher",
     "supertype": "trainer",
     "trainerType": "supporter",
     "text": "Draw 3 cards. You may play only 1 Supporter each turn.",
@@ -157,8 +534,26 @@
     "rarity": "stadium"
   },
   {
+    "id": "ptcg-stadium-wind-path",
+    "name": "Wind Path",
+    "supertype": "trainer",
+    "trainerType": "stadium",
+    "text": "Each player's Active Pokémon has 1 less Retreat Cost.",
+    "effect": "stadium-retreat-minus-1",
+    "rarity": "stadium"
+  },
+  {
     "id": "ptcg-tool-lucky-band",
     "name": "Lucky Band",
+    "supertype": "trainer",
+    "trainerType": "tool",
+    "text": "The Pokémon this card is attached to does 10 more damage to the opponent's Active Pokémon.",
+    "effect": "tool-damage-plus-10",
+    "rarity": "tool"
+  },
+  {
+    "id": "ptcg-tool-power-charm",
+    "name": "Power Charm",
     "supertype": "trainer",
     "trainerType": "tool",
     "text": "The Pokémon this card is attached to does 10 more damage to the opponent's Active Pokémon.",
